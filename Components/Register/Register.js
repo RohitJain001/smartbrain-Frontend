@@ -28,7 +28,7 @@ class Register extends React.Component{
     fetch('https://warm-reef-38212.herokuapp.com', {
       method : 'post',
       headers : {'Content-Type' : 'application/json'},
-      body: JSON.stringify({
+      body:JSON.stringify({
         name: this.state.registerName,
         email: this.state.registerEmail,
         password : this.state.registerPassword
