@@ -25,22 +25,22 @@ class Register extends React.Component{
   }
 
   onRegisterButtonClick=()=>{
-    fetch('https://warm-reef-38212.herokuapp.com/register', {
-      method : 'post',
-      headers : {'Content-Type' : 'application/json'},
-      body:JSON.stringify({
+    fetch('https://warm-reef-38212.herokuapp.com/register' , {
+          method : 'post',
+          headers : {'Content-Type' : 'application/json'},
+          body:JSON.stringify({
         name: this.state.registerName,
         email: this.state.registerEmail,
         password : this.state.registerPassword
       }) 
   })
-    .then(response => response.json())
-    .then(user => {
-      if(user.id){
-        this.props.loadUser(user)
-        this.props.onRouteChange('home')
+  .then(response => response.json())
+  .then(user => {
+    if(user.id){
+      this.props.loadUser(user)
+      this.props.onRouteChange('home')
     }
-    })
+  })
 }
 
   render(){
