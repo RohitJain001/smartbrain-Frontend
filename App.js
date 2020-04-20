@@ -106,9 +106,9 @@ onButtonSubmit=()=>{
 }
 
 onRouteChange=(route)=>{
-  if(route=='signin' || route=='register'){
+  if(route==='signin' || route==='register'){
     this.setState({initialState})
-  }else if(route=='home'){
+  }else if(route==='home'){
     this.setState({isSignedIn:true})
   }
   this.setState({route:route})
@@ -131,7 +131,7 @@ loadUser=(data)=>{
       <div className="App">
           <Particles className='particles'  params={particlesSet}/>
           <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} />
-          { this.state.route=='home'
+          { this.state.route==='home'
              ? <div>
              <Logo />
              <Rank name={this.state.user.name} entries={this.state.user.entries} />
@@ -140,7 +140,7 @@ loadUser=(data)=>{
               </div>
              :
              (
-               this.state.route=='signin'
+               this.state.route==='signin'
                ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
                : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
              )
