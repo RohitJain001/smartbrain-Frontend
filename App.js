@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navigation from './Components/Navigation/Navigation';
+import Navigation from "./Components/Navigation/Navigation.1";
 //import Clarifai from 'clarifai';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
